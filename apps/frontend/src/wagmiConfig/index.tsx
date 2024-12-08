@@ -31,6 +31,10 @@ const wagmiAdapter = new WagmiAdapter({
 
 // 4. Create modal
 createAppKit({
+  themeVariables: {
+    '--w3m-color-mix': '#b7722d',
+    '--w3m-accent': '#b7722d',
+  },
   adapters: [wagmiAdapter],
   allowUnsupportedChain: true,
   networks: [mainnet],
