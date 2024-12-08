@@ -27,7 +27,8 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string 
   return (
     <div className="py-7 px-4 border-b border-[#b7722d]" onClick={() => setIsOpen(!isOpen)}>
       <div className=" flex items-center ">
-        <span className=" flex-1 text-lg font-bold">{question}</span> <img src={isOpen ? minusIcon : plusIcon} alt="" />
+        <span className=" flex-1 text-lg sm:text-xl font-bold">{question}</span>{' '}
+        <img src={isOpen ? minusIcon : plusIcon} alt="" />
       </div>
       <AnimatePresence>
         {isOpen && (
@@ -36,6 +37,7 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string 
             animate={{ opacity: 1, height: 'auto', marginTop: 12 }}
             exit={{ opacity: 0, height: 0, marginTop: 0 }}
             transition={{ duration: 0.3 }}
+            className=" sm:text-lg"
           >
             {answer}
           </motion.div>
