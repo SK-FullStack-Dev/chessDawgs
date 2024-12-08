@@ -1,13 +1,15 @@
+import React from 'react';
 import kingImage from '../../src/assets/images/king.webp';
 import bishopImage from '../../src/assets/images/bishop.png';
 import { motion } from 'framer-motion';
+import PlayNowPopup from './PlayNowPopup';
 
 const Hero = () => {
   return (
-    <div className=" bg-black text-white bg-[linear-gradient(to_bottom,#000,#241807,#38250a,#b7722d)] py-[72px] sm:py-24 relative overflow-clip">
+    <div className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#241807,#38250a,#b7722d)] py-[72px] sm:py-24 relative overflow-clip">
       <div
-        className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[786px] lg:h-[1200px] lg:w-[5400px] rounded-[100%] left-1/2 -translate-x-1/2 bg-black border-[#b7722d] 
-      bg-[radial-gradient(closest-side,#000,#000,#32000,#b2722d)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"
+        className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[786px] lg:h-[1200px] lg:w-[5400px] rounded-[100%] left-1/2 -translate-x-1/2 bg-black border-[#b7722d]
+        bg-[radial-gradient(closest-side,#000,#000,#32000,#b2722d)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"
       ></div>
       <div className="container relative">
         <div className=" flex items-center justify-center">
@@ -28,7 +30,6 @@ const Hero = () => {
             >
               <img src={kingImage} alt="" draggable={false} />
             </motion.div>
-
             <motion.div drag dragSnapToOrigin className=" absolute top-[56px] left-[498px] w-[300px] hidden sm:inline">
               <img src={bishopImage} alt="" draggable={false} />
             </motion.div>
@@ -40,7 +41,7 @@ const Hero = () => {
           </p>
         </div>
         <div className=" flex items-center justify-center mt-8">
-          <button className=" bg-white text-black px-4 py-2 rounded-lg font-medium">Play Now</button>
+          <PlayNowPopup />
         </div>
       </div>
     </div>
