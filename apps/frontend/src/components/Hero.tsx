@@ -1,6 +1,6 @@
 import React from 'react';
-import kingImage from '../../src/assets/images/king.webp';
-import bishopImage from '../../src/assets/images/bishop.png';
+import heroDawgLeft from '../../src/assets/images/hero_dawg_l.png';
+import heroDawg from '../../src/assets/images/hero_dawg.png';
 import { motion } from 'framer-motion';
 import PlayNowPopup from './PlayNowPopup';
 
@@ -26,12 +26,12 @@ const Hero = () => {
             <motion.div
               drag
               dragSnapToOrigin
-              className=" absolute top-[108px] right-[476px] w-[300px] hidden sm:inline"
+              className=" absolute top-[108px] right-[576px] w-[300px] hidden sm:inline"
             >
-              <img src={kingImage} alt="" draggable={false} />
+              <img src={heroDawgLeft} alt="" draggable={false} />
             </motion.div>
-            <motion.div drag dragSnapToOrigin className=" absolute top-[56px] left-[498px] w-[300px] hidden sm:inline">
-              <img src={bishopImage} alt="" draggable={false} />
+            <motion.div drag dragSnapToOrigin className=" absolute top-[56px] left-[598px] w-[300px] hidden sm:inline">
+              <img src={heroDawg} alt="" draggable={false} />
             </motion.div>
           </div>
         </div>

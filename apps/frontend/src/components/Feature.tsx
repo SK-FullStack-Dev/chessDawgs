@@ -39,7 +39,7 @@ const Feature = ({ title, description, icon = '/default-icon.svg' }: FeatureProp
         ref={borderRef}
       ></motion.div>
       <div className="inline-flex h-14 w-14 bg-white justify-center items-center rounded-xl">
-        <img src={icon} alt={`Icon for ${title}`} width={48} height={48} className="max-w-full max-h-full" />
+        <img src={icon} alt={title} className="w-10 h-10" />
       </div>
       <h3 className="text-xl font-bold mt-6">{title}</h3>
       <p className="text-white/70 sm:text-lg mt-2">{description}</p>
